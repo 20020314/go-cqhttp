@@ -1,0 +1,8 @@
+kind: pipeline
+name: go-cqhttp
+
+steps:
+- name: Build
+  image: golang
+  commands:
+  - go build -ldflags "-s -w -extldflags '-static'"
